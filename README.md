@@ -4,7 +4,7 @@ Created a new repository `https://github.com/fmuwanguzi/node-express`
 
 Cloned it into a new folder in my labs
 
-Put `npm init`  and at the end of the prompts I added an `index.js`
+Input  `npm init`  and at the end of the prompts I added an `index.js`
 
 First step was to set up myModule.js with a function
 
@@ -31,3 +31,5 @@ console.log(multiply(2 , 3))
 
 To open this in my terminal I used the follwing prompt
 ` node index.js ` and I got the number 6
+
+More examples have been added in my code. 
