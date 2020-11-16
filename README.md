@@ -141,3 +141,70 @@ All of his information which leads to more information.
 We can push all this information back up to git hub but before we do that we need to `touch .gitignore` in our terminal.
 
 When then open `.gitignore` in our vscode and input `node_modules` this ensures when we push it back up it doesn't bring all the external module with it.
+
+## Setting up express app 
+
+Install express using your terminal `npm i express` you can use install instead of i
+
+Import the express module for your use into your js file 
+and set up your app
+
+```javascript
+const express = require('express');
+const app = express();
+```
+## Routes
+
+Example of a home route set app
+
+```javascript 
+app.get('/', function(req, res) {
+    res.send('Here is your home route');
+});
+
+app.listen(8000);
+
+```
+If you use google chrome you can now type in 
+`localhost:8000` you should see `"Here is your home route"` or home page.
+
+You can also set up routes to otther pages for example an about(or an name you'd like to give it) page
+
+```javascript
+
+app.get('/about', function(req, res){
+    res.send('All about me goes here');
+    
+});
+
+```
+
+To send information to your client now that you have an about route you can set up a `about.js` file.
+
+Simple add some simple HTML
+
+ie `<h3>I am learning about express</h3>`
+
+
+## Views
+
+Create a views folder and place your home page and about page there
+
+You can now call each file using 
+
+```javascript
+app.get('/about', function(req, res) {
+  res.sendFile(__dirname+'/views/about.html');
+});
+
+```
+
+## Templates
+
+Lets try using a template engine called ejs
+So lets `npm install ejs`
+
+
+Set it up with your app like so 
+
+`app.set('view engine', 'ejs');`
